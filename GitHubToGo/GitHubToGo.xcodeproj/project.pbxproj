@@ -15,7 +15,6 @@
 		D5DECD8719F56BB0001B98A1 /* GitHubToGoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DECD8619F56BB0001B98A1 /* GitHubToGoTests.swift */; };
 		D5DECD9119F56FD5001B98A1 /* SplitContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DECD9019F56FD5001B98A1 /* SplitContainerViewController.swift */; };
 		D5DECD9319F5A552001B98A1 /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DECD9219F5A552001B98A1 /* NetworkController.swift */; };
-		D5DECD9A19F5A7CB001B98A1 /* server.js in Resources */ = {isa = PBXBuildFile; fileRef = D5DECD9919F5A7CB001B98A1 /* server.js */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +40,6 @@
 		D5DECD8619F56BB0001B98A1 /* GitHubToGoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubToGoTests.swift; sourceTree = "<group>"; };
 		D5DECD9019F56FD5001B98A1 /* SplitContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplitContainerViewController.swift; sourceTree = "<group>"; };
 		D5DECD9219F5A552001B98A1 /* NetworkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
-		D5DECD9919F5A7CB001B98A1 /* server.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = server.js; path = ../../../../iOSacc/server.js; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,7 +136,6 @@
 		D5DECD9619F5A601001B98A1 /* Controller Layer */ = {
 			isa = PBXGroup;
 			children = (
-				D5DECD9919F5A7CB001B98A1 /* server.js */,
 				D5DECD9019F56FD5001B98A1 /* SplitContainerViewController.swift */,
 				D5DECD9219F5A552001B98A1 /* NetworkController.swift */,
 			);
@@ -228,7 +225,6 @@
 				D5DECD7619F56BB0001B98A1 /* Main.storyboard in Resources */,
 				D5DECD7B19F56BB0001B98A1 /* LaunchScreen.xib in Resources */,
 				D5DECD7819F56BB0001B98A1 /* Images.xcassets in Resources */,
-				D5DECD9A19F5A7CB001B98A1 /* server.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
