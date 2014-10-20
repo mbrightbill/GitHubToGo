@@ -6,24 +6,40 @@
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>D6912386-6848-4DBF-9833-C8E6D6B86ABF</string>
+	<key>IDESourceControlProjectName</key>
+	<string>GitHubToGo</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>1DF7C970947457D8E05EF946ED818825A3CC2A2D</key>
 		<string>https://github.com/mbrightbill/sea-b23-iOS.git</string>
+		<key>78E30F4FF0DF1AEEEF478FC9E30A167CC476EFA0</key>
+		<string>https://github.com/mbrightbill/GitHubToGo.git</string>
 	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>GitHubToGo/GitHubToGo.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>1DF7C970947457D8E05EF946ED818825A3CC2A2D</key>
-		<string>iOSacc</string>
+		<string>../../../../iOSacc</string>
+		<key>78E30F4FF0DF1AEEEF478FC9E30A167CC476EFA0</key>
+		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/mbrightbill/sea-b23-iOS.git</string>
+	<string>https://github.com/mbrightbill/GitHubToGo.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>1DF7C970947457D8E05EF946ED818825A3CC2A2D</string>
+	<string>78E30F4FF0DF1AEEEF478FC9E30A167CC476EFA0</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>78E30F4FF0DF1AEEEF478FC9E30A167CC476EFA0</string>
+			<key>IDESourceControlWCCName</key>
+			<string>gitHubToGoProject</string>
+		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>

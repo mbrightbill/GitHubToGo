@@ -15,6 +15,7 @@
 		D5DECD8719F56BB0001B98A1 /* GitHubToGoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DECD8619F56BB0001B98A1 /* GitHubToGoTests.swift */; };
 		D5DECD9119F56FD5001B98A1 /* SplitContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DECD9019F56FD5001B98A1 /* SplitContainerViewController.swift */; };
 		D5DECD9319F5A552001B98A1 /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DECD9219F5A552001B98A1 /* NetworkController.swift */; };
+		D5DECD9C19F5AC66001B98A1 /* RepositoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DECD9B19F5AC66001B98A1 /* RepositoryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		D5DECD8619F56BB0001B98A1 /* GitHubToGoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubToGoTests.swift; sourceTree = "<group>"; };
 		D5DECD9019F56FD5001B98A1 /* SplitContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplitContainerViewController.swift; sourceTree = "<group>"; };
 		D5DECD9219F5A552001B98A1 /* NetworkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
+		D5DECD9B19F5AC66001B98A1 /* RepositoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +140,7 @@
 			children = (
 				D5DECD9019F56FD5001B98A1 /* SplitContainerViewController.swift */,
 				D5DECD9219F5A552001B98A1 /* NetworkController.swift */,
+				D5DECD9B19F5AC66001B98A1 /* RepositoryViewController.swift */,
 			);
 			name = "Controller Layer";
 			sourceTree = "<group>";
@@ -246,6 +249,7 @@
 				D5DECD6E19F56BB0001B98A1 /* AppDelegate.swift in Sources */,
 				D5DECD7119F56BB0001B98A1 /* GitHubToGo.xcdatamodeld in Sources */,
 				D5DECD9119F56FD5001B98A1 /* SplitContainerViewController.swift in Sources */,
+				D5DECD9C19F5AC66001B98A1 /* RepositoryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
