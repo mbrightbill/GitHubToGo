@@ -56,7 +56,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="3bb-lf-cay" kind="show" identifier="SHOW_REPO" id="ukr-TR-m04"/>
+                                            <segue destination="3bb-lf-cay" kind="showDetail" identifier="SHOW_REPO" id="ukr-TR-m04"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="zyy-0C-UvL">
@@ -120,7 +120,7 @@
         <!--Repository View Controller-->
         <scene sceneID="Vhn-9Z-BFB">
             <objects>
-                <viewController id="3bb-lf-cay" customClass="RepositoryViewController" sceneMemberID="viewController">
+                <viewController id="3bb-lf-cay" customClass="RepositoryViewController" customModule="GitHubToGo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8Cf-tJ-oMd"/>
                         <viewControllerLayoutGuide type="bottom" id="4Ul-9a-yMG"/>
@@ -129,47 +129,44 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="85" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="1f0-De-cy7">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="47" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="STr-74-y7y">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <label key="tableHeaderView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="iJE-JU-Us7">
-                                    <rect key="frame" x="0.0" y="-21" width="600" height="44"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="85" id="XtX-ef-MuA" customClass="RepoCell" customModule="GitHubToGo" customModuleProvider="target">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="repoCell" rowHeight="47" id="TR0-bO-NNT" customClass="RepoCell" customModule="GitHubToGo" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XtX-ef-MuA" id="nNt-UT-q4M">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TR0-bO-NNT" id="Xk0-ac-B3T">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cc0-hF-M2R">
-                                                    <rect key="frame" x="206" y="29" width="188" height="28"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aRt-fd-eKM">
+                                                    <rect key="frame" x="234" y="6" width="133" height="35"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="repoLabel" destination="Cc0-hF-M2R" id="nPK-HA-iOT"/>
+                                            <outlet property="repoLabel" destination="aRt-fd-eKM" id="pLI-Xj-KrO"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="3bb-lf-cay" id="B5I-ex-5KF"/>
+                                    <outlet property="delegate" destination="3bb-lf-cay" id="RXI-r4-OWQ"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="1f0-De-cy7" firstAttribute="leading" secondItem="lNW-dr-tay" secondAttribute="leading" id="7K8-kr-zOk"/>
-                            <constraint firstAttribute="trailing" secondItem="1f0-De-cy7" secondAttribute="trailing" id="R0S-MW-EJZ"/>
-                            <constraint firstItem="4Ul-9a-yMG" firstAttribute="top" secondItem="1f0-De-cy7" secondAttribute="bottom" id="aZs-hM-yFe"/>
-                            <constraint firstItem="1f0-De-cy7" firstAttribute="top" secondItem="lNW-dr-tay" secondAttribute="top" id="jBc-wV-h4w"/>
+                            <constraint firstItem="4Ul-9a-yMG" firstAttribute="top" secondItem="STr-74-y7y" secondAttribute="bottom" id="7GW-C8-puv"/>
+                            <constraint firstAttribute="trailing" secondItem="STr-74-y7y" secondAttribute="trailing" id="KUv-ab-2xF"/>
+                            <constraint firstItem="STr-74-y7y" firstAttribute="top" secondItem="8Cf-tJ-oMd" secondAttribute="bottom" id="QTM-To-3tn"/>
+                            <constraint firstItem="STr-74-y7y" firstAttribute="leading" secondItem="lNW-dr-tay" secondAttribute="leading" id="gqZ-vK-rky"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="repositoryTableView" destination="1f0-De-cy7" id="nHN-ia-jjw"/>
+                        <outlet property="repositoryTableView" destination="STr-74-y7y" id="4YA-Ob-fDC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7rP-Lu-NPO" userLabel="First Responder" sceneMemberID="firstResponder"/>

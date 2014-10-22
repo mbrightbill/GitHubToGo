@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D50B66BC19F6157500CA568D /* RepoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50B66BB19F6157500CA568D /* RepoCell.swift */; };
+		D50B66BE19F6D15E00CA568D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50B66BD19F6D15E00CA568D /* ViewController.swift */; };
 		D576454C19F5C58F002021DD /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D576454B19F5C58F002021DD /* Repository.swift */; };
 		D5DECD6E19F56BB0001B98A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DECD6D19F56BB0001B98A1 /* AppDelegate.swift */; };
 		D5DECD7119F56BB0001B98A1 /* GitHubToGo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D5DECD6F19F56BB0001B98A1 /* GitHubToGo.xcdatamodeld */; };
@@ -32,6 +33,7 @@
 
 /* Begin PBXFileReference section */
 		D50B66BB19F6157500CA568D /* RepoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoCell.swift; sourceTree = "<group>"; };
+		D50B66BD19F6D15E00CA568D /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D576454B19F5C58F002021DD /* Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		D5DECD6819F56BB0001B98A1 /* GitHubToGo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHubToGo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5DECD6C19F56BB0001B98A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -126,7 +128,6 @@
 			isa = PBXGroup;
 			children = (
 				D576454B19F5C58F002021DD /* Repository.swift */,
-				D50B66BB19F6157500CA568D /* RepoCell.swift */,
 			);
 			name = "Model Layer";
 			sourceTree = "<group>";
@@ -135,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				D5DECD7919F56BB0001B98A1 /* LaunchScreen.xib */,
+				D50B66BB19F6157500CA568D /* RepoCell.swift */,
 				D5DECD7419F56BB0001B98A1 /* Main.storyboard */,
 				D5DECD7719F56BB0001B98A1 /* Images.xcassets */,
 			);
@@ -147,6 +149,7 @@
 				D5DECD9019F56FD5001B98A1 /* SplitContainerViewController.swift */,
 				D5DECD9219F5A552001B98A1 /* NetworkController.swift */,
 				D5DECD9B19F5AC66001B98A1 /* RepositoryViewController.swift */,
+				D50B66BD19F6D15E00CA568D /* ViewController.swift */,
 			);
 			name = "Controller Layer";
 			sourceTree = "<group>";
@@ -257,6 +260,7 @@
 				D5DECD7119F56BB0001B98A1 /* GitHubToGo.xcdatamodeld in Sources */,
 				D5DECD9119F56FD5001B98A1 /* SplitContainerViewController.swift in Sources */,
 				D5DECD9C19F5AC66001B98A1 /* RepositoryViewController.swift in Sources */,
+				D50B66BE19F6D15E00CA568D /* ViewController.swift in Sources */,
 				D576454C19F5C58F002021DD /* Repository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

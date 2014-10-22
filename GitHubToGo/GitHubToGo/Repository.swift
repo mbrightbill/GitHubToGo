@@ -37,8 +37,9 @@ class Repository {
             var repositories = [Repository]()
             
             if let itemsJSONArray = JSONDictionary["items"] as? NSArray {
-                for repoInfo in itemsJSONArray {
-                    if let repo = Repository(attributeDictionary: repoInfo as? NSDictionary) {
+                for object in itemsJSONArray {
+                    if let repoInfo = object as? NSDictionary {
+                        let repo = Repository(attributeDictionary: repoInfo)
                         repositories.append(repo)
                     }
                     

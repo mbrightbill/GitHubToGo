@@ -23,6 +23,7 @@ class SplitContainerViewController: UIViewController, UISplitViewControllerDeleg
         // Dispose of any resources that can be recreated.
     }
     
+    // only gets called if this VC is the delegate
     func splitViewController(splitViewController: UISplitViewController, collapseSecondaryViewController secondaryViewController: UIViewController!, ontoPrimaryViewController primaryViewController: UIViewController!) -> Bool {
         return true
     }

@@ -12,10 +12,9 @@ class RepositoryViewController: UIViewController, UITableViewDelegate, UITableVi
     
     var networkController : NetworkController!
     
-    var repositories : [Repository]?
+    var repositories : [Repository]!
     
     @IBOutlet weak var repositoryTableView: UITableView!
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,7 +24,7 @@ class RepositoryViewController: UIViewController, UITableViewDelegate, UITableVi
         let appDelegate = UIApplication.sharedApplication().delegate as AppDelegate
         self.networkController = appDelegate.networkController
 
-        self.networkController.fetchRepositoriesUsingSearch("Some Word", completionHandler: { (errorDescription, repos) -> (Void) in
+        self.networkController.fetchRepositoriesUsingSearch({ (errorDescription, repos) -> (Void) in
             if errorDescription != nil {
                 println("\(errorDescription)")
             } else {
@@ -37,7 +36,7 @@ class RepositoryViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if repositories != nil {
+        if self.repositories != nil {
             return self.repositories.count
         } else {
             return 0
@@ -46,16 +45,15 @@ class RepositoryViewController: UIViewController, UITableViewDelegate, UITableVi
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let cell = repositoryTableView.dequeueReusableCellWithIdentifier("SHOW_REPO", forIndexPath: indexPath) as RepoCell
+        let cell = repositoryTableView.dequeueReusableCellWithIdentifier("repoCell", forIndexPath: indexPath) as RepoCell
         let singleRepo = repositories?[indexPath.row]
         
         // use some part of repo info to populate the cell
-        
-        cell.repoLabel?.text = singleRepo?.loginName
+        if singleRepo?.name != nil {
+            cell.repoLabel?.text = singleRepo?.name
+        }
         
         return cell
         
     }
-    
-
 }
