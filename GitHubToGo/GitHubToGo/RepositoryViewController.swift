@@ -8,31 +8,41 @@
 
 import UIKit
 
-class RepositoryViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIApplicationDelegate {
+class RepositoryViewController: UIViewController,UITableViewDataSource, UIApplicationDelegate, UISearchBarDelegate {
     
     var networkController : NetworkController!
     
     var repositories : [Repository]!
     
+    @IBOutlet weak var searchBar: UISearchBar!
+    
     @IBOutlet weak var repositoryTableView: UITableView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.repositoryTableView.delegate = self
         self.repositoryTableView.dataSource = self
+        self.searchBar.delegate = self
         
         let appDelegate = UIApplication.sharedApplication().delegate as AppDelegate
         self.networkController = appDelegate.networkController
-
-        self.networkController.fetchRepositoriesUsingSearch({ (errorDescription, repos) -> (Void) in
-            if errorDescription != nil {
-                println("\(errorDescription)")
-            } else {
-                self.repositories = repos
-                self.repositoryTableView.reloadData()
-            }
-        })
         
+        self.searchBar.placeholder = "Search Repositories"
+    }
+    
+    func searchBarSearchButtonClicked(searchBar: UISearchBar) {
+        self.networkController.fetchRepositoriesUsingSearch(searchBar.text, completionHandler: { (repos) -> (Void) in
+            self.repositories = repos
+            self.repositoryTableView.reloadData()
+        })
+        self.searchBar.resignFirstResponder()
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        if self.networkController.isAuthenticated() == false {
+            self.networkController.requestOAuthAccess()
+        }
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

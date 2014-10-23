@@ -120,7 +120,7 @@
         <!--Repository View Controller-->
         <scene sceneID="Vhn-9Z-BFB">
             <objects>
-                <viewController id="3bb-lf-cay" customClass="RepositoryViewController" customModule="GitHubToGo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="3bb-lf-cay" customClass="RepositoryViewController" customModule="GitHubToGo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8Cf-tJ-oMd"/>
                         <viewControllerLayoutGuide type="bottom" id="4Ul-9a-yMG"/>
@@ -132,6 +132,11 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="47" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="STr-74-y7y">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <searchBar key="tableHeaderView" contentMode="redraw" id="q8B-zA-hn3">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </searchBar>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="repoCell" rowHeight="47" id="TR0-bO-NNT" customClass="RepoCell" customModule="GitHubToGo" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
@@ -167,6 +172,7 @@
                     </view>
                     <connections>
                         <outlet property="repositoryTableView" destination="STr-74-y7y" id="4YA-Ob-fDC"/>
+                        <outlet property="searchBar" destination="q8B-zA-hn3" id="jfV-aB-qwE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7rP-Lu-NPO" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -23,7 +23,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject?) -> Bool {
-        return true
+        
+        if url.host == "www.github.com" {
+            self.networkController.handleOAuthURL(url)
+        }
+        return false
     }
 
     func applicationWillResignActive(application: UIApplication) {

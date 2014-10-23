@@ -24,10 +24,10 @@
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>CFBundleURLName</key>
-			<string>org.matthewbrightbill.githubtogo</string>
+			<string>com.mtb.githubtogoapp</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>somefancyword</string>
+				<string>githubtogoapp</string>
 			</array>
 		</dict>
 	</array>
