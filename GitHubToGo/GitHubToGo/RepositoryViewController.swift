@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RepositoryViewController: UIViewController,UITableViewDataSource, UIApplicationDelegate, UISearchBarDelegate {
+class RepositoryViewController: UIViewController,UITableViewDataSource, UIApplicationDelegate, UISearchBarDelegate, UITableViewDelegate {
     
     var networkController : NetworkController!
     
@@ -21,6 +21,7 @@ class RepositoryViewController: UIViewController,UITableViewDataSource, UIApplic
     override func viewDidLoad() {
         super.viewDidLoad()
         self.repositoryTableView.dataSource = self
+        self.repositoryTableView.delegate = self
         self.searchBar.delegate = self
         
         let appDelegate = UIApplication.sharedApplication().delegate as AppDelegate
@@ -35,6 +36,11 @@ class RepositoryViewController: UIViewController,UITableViewDataSource, UIApplic
             self.repositoryTableView.reloadData()
         })
         self.searchBar.resignFirstResponder()
+    }
+    
+    func searchBar(searchBar: UISearchBar, shouldChangeTextInRange range: NSRange, replacementText text: String) -> Bool {
+        println(text)
+        return text.validate()
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -64,5 +70,13 @@ class RepositoryViewController: UIViewController,UITableViewDataSource, UIApplic
         }
         
         return cell
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let selectedRepo = repositories![indexPath.row]
+        
+        let webViewController = self.storyboard?.instantiateViewControllerWithIdentifier("WEB_VC") as WebViewController
+        webViewController.repo = selectedRepo
+        self.navigationController?.pushViewController(webViewController, animated: true)
     }
 }

@@ -331,22 +331,66 @@
             </objects>
             <point key="canvasLocation" x="1174" y="875"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="EVy-3t-35R">
+        <!--User Detail View Controller-->
+        <scene sceneID="Ae2-Z0-CrX">
             <objects>
-                <viewController id="MT5-bC-MTk" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="USER_DETAIL" id="5w4-U7-u09" customClass="UserDetailViewController" customModule="GitHubToGo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="GqO-C8-a17"/>
-                        <viewControllerLayoutGuide type="bottom" id="K4m-Y5-gCO"/>
+                        <viewControllerLayoutGuide type="top" id="y9G-Pi-TJt"/>
+                        <viewControllerLayoutGuide type="bottom" id="JYh-mX-aHA"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="wof-iL-Lek">
+                    <view key="view" contentMode="scaleToFill" id="Lgl-kc-8Mx">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0bV-2X-5ei">
+                                <rect key="frame" x="175" y="20" width="250" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="Kpp-Sk-9yX"/>
+                                    <constraint firstAttribute="height" constant="250" id="ah0-pm-mJK"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fOB-CC-2Eb">
+                                <rect key="frame" x="262" y="291" width="77" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0bV-2X-5ei" firstAttribute="top" secondItem="y9G-Pi-TJt" secondAttribute="bottom" id="0oW-jf-JSX"/>
+                            <constraint firstAttribute="centerX" secondItem="0bV-2X-5ei" secondAttribute="centerX" id="QeA-JX-uec"/>
+                            <constraint firstItem="fOB-CC-2Eb" firstAttribute="top" secondItem="0bV-2X-5ei" secondAttribute="bottom" constant="21" id="qeR-IP-jv4"/>
+                            <constraint firstAttribute="centerX" secondItem="fOB-CC-2Eb" secondAttribute="centerX" id="thX-vj-7yP"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="0bV-2X-5ei" id="w7e-eg-rg7"/>
+                        <outlet property="userNameLabel" destination="fOB-CC-2Eb" id="r6U-ny-5Sx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yuU-Xe-naq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1174" y="1628"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="QCh-F4-Gp5">
+            <objects>
+                <viewController storyboardIdentifier="WEB_VC" id="5rs-0c-7OD" customClass="WebViewController" customModule="GitHubToGo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pyS-nT-7C3"/>
+                        <viewControllerLayoutGuide type="bottom" id="yFa-yB-MNe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ffn-4O-29Y">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fes-Jv-lhu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vp9-Ci-Uj2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="2570" y="84"/>
         </scene>
     </scenes>
 </document>

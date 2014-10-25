@@ -61,11 +61,25 @@ class UserSearchViewController: UIViewController, UICollectionViewDataSource, UI
         return cell
     }
     
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        let selectedUser = users[indexPath.row] as User
+        let userDetailVC = self.storyboard?.instantiateViewControllerWithIdentifier("USER_DETAIL") as UserDetailViewController
+        userDetailVC.user = selectedUser
+        self.navigationController?.pushViewController(userDetailVC, animated: true)
+        
+        
+    }
+    
     func searchBarSearchButtonClicked(searchBar: UISearchBar) {
         self.networkController.fetchUsersUsingSearch(searchBar.text, completionHandler: { (users) -> (Void) in
             self.users = users
             self.collectionView.reloadData()
         })
         self.userSearchBar.resignFirstResponder()
+    }
+    
+    func searchBar(searchBar: UISearchBar, shouldChangeTextInRange range: NSRange, replacementText text: String) -> Bool {
+        println(text)
+        return text.validate()
     }
 }
