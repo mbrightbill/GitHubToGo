@@ -58,7 +58,6 @@ class UserSearchViewController: UIViewController, UICollectionViewDataSource, UI
                 }
             })
         }
-        
         return cell
     }
     
@@ -67,8 +66,6 @@ class UserSearchViewController: UIViewController, UICollectionViewDataSource, UI
             self.users = users
             self.collectionView.reloadData()
         })
-        
-        
         self.userSearchBar.resignFirstResponder()
     }
 }

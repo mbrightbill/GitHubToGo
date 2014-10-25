@@ -42,16 +42,11 @@ class Repository {
                         let repo = Repository(attributeDictionary: repoInfo)
                         repositories.append(repo)
                     }
-                    
                 }
-                
             }
             return repositories
             
         }
         return nil
     }
-
 }
-
-

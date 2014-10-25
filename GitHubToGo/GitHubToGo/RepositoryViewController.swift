@@ -64,6 +64,5 @@ class RepositoryViewController: UIViewController,UITableViewDataSource, UIApplic
         }
         
         return cell
-        
     }
 }

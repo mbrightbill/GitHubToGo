@@ -20,7 +20,6 @@ class User {
         self.avatarURL = initialDictionary["avatar_url"] as String
     }
     
-    
     class func parseJSONIntoUsers(rawJSONData : NSData) -> [User]? {
         var error: NSError?
         
@@ -39,7 +38,5 @@ class User {
             return users
         }
         return nil
-        
     }
-    
 }

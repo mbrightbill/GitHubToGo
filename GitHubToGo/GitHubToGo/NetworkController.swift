@@ -35,8 +35,6 @@ class NetworkController {
         }
         
     }
-    
-    
    
     func fetchRepositoriesUsingSearch(inputString: String, completionHandler : (repos: [Repository]?) -> (Void)) {
         
@@ -85,7 +83,6 @@ class NetworkController {
         dataTask.resume()
 
     }
-    
     
     func requestOAuthAccess() {
         let url = self.gitHubOAuthURL + self.clientID + "&" + self.redirectURL + "&" + self.scope
@@ -159,7 +156,6 @@ class NetworkController {
             }
         }
         return nil
-
     }
     
     func convertURLStringToUsableImage(user: User, completionHandler : (usableImage: UIImage) -> (Void)) {
@@ -173,8 +169,5 @@ class NetworkController {
                 completionHandler(usableImage: avatarImage!)
             })
         }
-        
     }
-    
-    
 }
