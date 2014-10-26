@@ -15,6 +15,8 @@ class UserDetailViewController: UIViewController {
     
     var user: User?
     var networkController: NetworkController?
+    var image: UIImage?
+    var reverseOrigin: CGRect?
     
     override func viewDidLoad() {
         super.viewDidLoad()

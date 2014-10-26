@@ -8,12 +8,13 @@
 
 import UIKit
 
-class UserSearchViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UISearchBarDelegate {
+class UserSearchViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UISearchBarDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var userSearchBar: UISearchBar!
-    var networkController : NetworkController!
-    var users : [User]!
+    var networkController: NetworkController!
+    var users: [User]!
+    var origin: CGRect?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,12 +63,15 @@ class UserSearchViewController: UIViewController, UICollectionViewDataSource, UI
     }
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        let attributes = collectionView.layoutAttributesForItemAtIndexPath(indexPath)
+        let origin = self.view.convertRect(attributes!.frame, fromView: collectionView)
+        self.origin = origin
+        
         let selectedUser = users[indexPath.row] as User
         let userDetailVC = self.storyboard?.instantiateViewControllerWithIdentifier("USER_DETAIL") as UserDetailViewController
         userDetailVC.user = selectedUser
+        userDetailVC.reverseOrigin = self.origin!
         self.navigationController?.pushViewController(userDetailVC, animated: true)
-        
-        
     }
     
     func searchBarSearchButtonClicked(searchBar: UISearchBar) {

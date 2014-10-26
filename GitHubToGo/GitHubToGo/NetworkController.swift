@@ -158,6 +158,8 @@ class NetworkController {
         return nil
     }
     
+    //MARK: URL to Image
+    
     func convertURLStringToUsableImage(user: User, completionHandler : (usableImage: UIImage) -> (Void)) {
         
         self.imageQueue.addOperationWithBlock { () -> Void in
