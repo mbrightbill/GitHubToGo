@@ -9,7 +9,6 @@
 import UIKit
 
 class ShowUserAnimator: NSObject, UIViewControllerAnimatedTransitioning {
-    
     var origin: CGRect?
     
     func transitionDuration(transitionContext: UIViewControllerContextTransitioning) -> NSTimeInterval {
@@ -37,4 +36,5 @@ class ShowUserAnimator: NSObject, UIViewControllerAnimatedTransitioning {
                 transitionContext.completeTransition(finished)
         }
     }
+
 }
