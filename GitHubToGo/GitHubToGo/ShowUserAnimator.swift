@@ -36,5 +36,4 @@ class ShowUserAnimator: NSObject, UIViewControllerAnimatedTransitioning {
                 transitionContext.completeTransition(finished)
         }
     }
-
 }
