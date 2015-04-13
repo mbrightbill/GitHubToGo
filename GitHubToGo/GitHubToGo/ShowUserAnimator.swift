@@ -17,8 +17,8 @@ class ShowUserAnimator: NSObject, UIViewControllerAnimatedTransitioning {
     
     func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
         
-        let fromVC = transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey) as UserSearchViewController
-        let toVC = transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey) as UserDetailViewController
+        let fromVC = transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey) as! UserSearchViewController
+        let toVC = transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey) as! UserDetailViewController
         let containerView = transitionContext.containerView()
         
         toVC.view.frame = self.origin!

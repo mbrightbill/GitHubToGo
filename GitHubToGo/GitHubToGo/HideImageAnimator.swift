@@ -17,8 +17,8 @@ class HideImageAnimator: NSObject, UIViewControllerAnimatedTransitioning {
     }
     
     func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
-        let fromVC = transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey) as UserDetailViewController
-        let toVC = transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey) as UserSearchViewController
+        let fromVC = transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey) as! UserDetailViewController
+        let toVC = transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey) as! UserSearchViewController
         
         let containerView = transitionContext.containerView()
         containerView.insertSubview(toVC.view, aboveSubview: fromVC.view)

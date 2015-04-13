@@ -21,7 +21,7 @@ class UserDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let appDelegate = UIApplication.sharedApplication().delegate as AppDelegate
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         self.networkController = appDelegate.networkController
         
         self.networkController?.convertURLStringToUsableImage(user!, completionHandler: { (usableImage) -> (Void) in

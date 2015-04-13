@@ -23,7 +23,7 @@ class UserSearchViewController: UIViewController, UICollectionViewDataSource, UI
         self.collectionView.delegate = self
         self.userSearchBar.delegate = self
         
-        let appDelegate = UIApplication.sharedApplication().delegate as AppDelegate
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         self.networkController = appDelegate.networkController
         
         self.userSearchBar.placeholder = "Search Users"
@@ -47,7 +47,7 @@ class UserSearchViewController: UIViewController, UICollectionViewDataSource, UI
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("USER_CELL", forIndexPath: indexPath) as UserCollectionViewCell
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("USER_CELL", forIndexPath: indexPath) as! UserCollectionViewCell
         cell.userNameLabel.text = self.users![indexPath.row].userName
         
         if self.users![indexPath.row].userImage != nil {
@@ -68,7 +68,7 @@ class UserSearchViewController: UIViewController, UICollectionViewDataSource, UI
         self.origin = origin
         
         let selectedUser = users[indexPath.row] as User
-        let userDetailVC = self.storyboard?.instantiateViewControllerWithIdentifier("USER_DETAIL") as UserDetailViewController
+        let userDetailVC = self.storyboard?.instantiateViewControllerWithIdentifier("USER_DETAIL") as! UserDetailViewController
         userDetailVC.user = selectedUser
         userDetailVC.reverseOrigin = self.origin!
         self.navigationController?.pushViewController(userDetailVC, animated: true)

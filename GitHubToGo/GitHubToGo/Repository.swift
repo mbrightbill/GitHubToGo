@@ -19,13 +19,13 @@ class Repository {
     var avatarUrl : String
     
     init(attributeDictionary : NSDictionary) {
-        self.name = attributeDictionary["name"] as String
-        self.fullName = attributeDictionary["full_name"] as String
-        self.owner = attributeDictionary["owner"] as NSDictionary
-        self.apiUrl = owner["url"] as String
-        self.description = attributeDictionary["description"] as String
-        self.loginName = owner["login"] as String
-        self.avatarUrl = owner["avatar_url"] as String
+        self.name = attributeDictionary["name"] as! String
+        self.fullName = attributeDictionary["full_name"] as! String
+        self.owner = attributeDictionary["owner"] as! NSDictionary
+        self.apiUrl = owner["url"] as! String
+        self.description = attributeDictionary["description"] as! String
+        self.loginName = owner["login"] as! String
+        self.avatarUrl = owner["avatar_url"] as! String
     }
     
     

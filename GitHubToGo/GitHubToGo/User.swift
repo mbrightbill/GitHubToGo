@@ -16,8 +16,8 @@ class User {
     var userImage : UIImage?
     
     init(initialDictionary : NSDictionary) {
-        self.userName = initialDictionary["login"] as String
-        self.avatarURL = initialDictionary["avatar_url"] as String
+        self.userName = initialDictionary["login"] as! String
+        self.avatarURL = initialDictionary["avatar_url"] as! String
     }
     
     class func parseJSONIntoUsers(rawJSONData : NSData) -> [User]? {

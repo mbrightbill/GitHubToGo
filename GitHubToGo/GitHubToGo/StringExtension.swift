@@ -13,7 +13,7 @@ extension String {
         var error: NSError?
         
         let regex = NSRegularExpression(pattern: "[^0-9a-zA-Z\n]", options: nil, error: &error)
-        let match = regex?.numberOfMatchesInString(self, options: nil, range: NSRange(location: 0, length: countElements(self)))
+        let match = regex?.numberOfMatchesInString(self, options: nil, range: NSRange(location: 0, length: count(self)))
         if match > 0 {
             return false
         }

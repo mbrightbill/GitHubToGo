@@ -24,7 +24,7 @@ class RepositoryViewController: UIViewController,UITableViewDataSource, UIApplic
         self.repositoryTableView.delegate = self
         self.searchBar.delegate = self
         
-        let appDelegate = UIApplication.sharedApplication().delegate as AppDelegate
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         self.networkController = appDelegate.networkController
         
         self.searchBar.placeholder = "Search Repositories"
@@ -61,7 +61,7 @@ class RepositoryViewController: UIViewController,UITableViewDataSource, UIApplic
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let cell = repositoryTableView.dequeueReusableCellWithIdentifier("repoCell", forIndexPath: indexPath) as RepoCell
+        let cell = repositoryTableView.dequeueReusableCellWithIdentifier("repoCell", forIndexPath: indexPath) as! RepoCell
         let singleRepo = repositories?[indexPath.row]
         
         // use some part of repo info to populate the cell
@@ -75,7 +75,7 @@ class RepositoryViewController: UIViewController,UITableViewDataSource, UIApplic
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let selectedRepo = repositories![indexPath.row]
         
-        let webViewController = self.storyboard?.instantiateViewControllerWithIdentifier("WEB_VC") as WebViewController
+        let webViewController = self.storyboard?.instantiateViewControllerWithIdentifier("WEB_VC") as! WebViewController
         webViewController.repo = selectedRepo
         self.navigationController?.pushViewController(webViewController, animated: true)
     }
