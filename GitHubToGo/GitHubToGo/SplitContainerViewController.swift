@@ -13,7 +13,7 @@ class SplitContainerViewController: UIViewController, UISplitViewControllerDeleg
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let splitVC = self.childViewControllers[0] as UISplitViewController
+        let splitVC = self.childViewControllers[0] as! UISplitViewController
         splitVC.delegate = self
     }
 

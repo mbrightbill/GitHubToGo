@@ -31,7 +31,7 @@ class NetworkController {
         
         self.oAuthTokenKey = "OAuthTokenKey"
         if let token = NSUserDefaults.standardUserDefaults().objectForKey(oAuthTokenKey!) as? NSString {
-            self.setupConfigWithAccessToken(token)
+            self.setupConfigWithAccessToken(token as String)
         }
         
     }
@@ -111,7 +111,7 @@ class NetworkController {
                     switch httpResponse.statusCode {
                     case 200...204:
                         var tokenResponse = NSString(data: data, encoding: NSASCIIStringEncoding)
-                        self.helperToGrabToken(tokenResponse!)
+                        self.helperToGrabToken(tokenResponse! as String)
                         self.setupConfigWithAccessToken(self.finalToken!)
                         self.session = NSURLSession(configuration: self.authenticationConfig!)
                         
